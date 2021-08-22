@@ -25,10 +25,10 @@ public class 문자삼각형2_1339 {
 			}
 		}
 	
-	// 출력
+	// 출력 
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < N; j++) {
-			if (arr[i][j]=='\0') {
+			if (arr[i][j]=='\0') { // 그 방의 값이 null일 경우, 공백을 셋팅해주기
 				arr[i][j]=' ';
 			}
 			System.out.print(arr[i][j]+" ");

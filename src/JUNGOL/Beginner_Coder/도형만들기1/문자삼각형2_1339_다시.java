@@ -14,7 +14,7 @@ public class 문자삼각형2_1339_다시 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int N = sc.nextInt(); // 삼각형의 높이
+		int N = sc.nextInt(); // 삼각형의 높이 (1이상 100 이하의 홀수)
 		if (N%2==0 || N<1 || N>100) {
 			System.out.println("INPUT ERROR");
 			return;
@@ -25,7 +25,7 @@ public class 문자삼각형2_1339_다시 {
 			for (int c = 0; c < N; c++) {
 				arr[r][c] = ' ';
 			}
-		}
+		} 
 
 		char alphabet = 'A';
 
