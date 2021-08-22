@@ -16,10 +16,9 @@ public class 문자삼각형1_1338_다시 {
 		int N =sc.nextInt(); // 삼각형의 높이 N(N의 범위는 100 이하의 양의 정수)
 		char[][] arr =new char[N][N];
 		
-		// 21~25line 이거 안쓰면 왜 안되는지
-		// int형 배열일 때 0처럼 자동 초기화X??? ===> 공백' ' 아니라 null로 자동 초기화
-		// ' ' != null
 		
+		// ' ' != null
+		// char 2차원 배열의 기본값은 null이므로, 공백을 셋팅해주기
 		for (int r = 0; r < N; r++) {
 			for (int c = 0; c < N; c++) {
 				arr[r][c] = ' ';

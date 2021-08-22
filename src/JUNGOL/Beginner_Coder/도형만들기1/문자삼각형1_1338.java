@@ -8,37 +8,13 @@ import java.util.Scanner;
  */
 public class 문자삼각형1_1338 {
 	public static void main(String[] args) {
-/*
-		Scanner sc = new Scanner(System.in);
-		
-		int N =sc.nextInt();
-		char [][]arr = new char[N][N];
-		char alphabet ='A';
-		
-		
-		for (int i = 0; i < N; i++) {
-		    for (int j = i, k = N-1; j < N; j++, k--) {
-		        arr[j][k] = alphabet++;
-		        if(alphabet > 'Z')
-		            alphabet = 'A';
-		    }
-		}
 
-		// 출력
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				System.out.print(arr[i][j]+" ");
-			}
-			System.out.println();
-		}
-*/
 Scanner sc = new Scanner(System.in);
 		
 		int N = sc.nextInt();
-		
 		char[][] res = new char[N][N];
 		
-		// char 2차원 배열의 기본값은 없으므로, 공백을 셋팅해주기
+		// char 2차원 배열의 기본값은 null이므로, 공백을 셋팅해주기
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				res[i][j] = ' ';
@@ -51,7 +27,7 @@ Scanner sc = new Scanner(System.in);
 		
 		for (int row = 0; row < N; row++) {
 			for (int i = 0; row+i < N; i++) {
-				res[row+i][N-1-i] = (char) (text+temp%26);		// 알파벳 개수 만큼 반복되도록
+				res[row+i][N-1-i] = (char) (text+temp%26); // 알파벳 개수 만큼 반복되도록
 				temp++;
 			}
 		}
